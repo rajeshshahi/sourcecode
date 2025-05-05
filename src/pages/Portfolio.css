@@ -1,0 +1,46 @@
+.portfolio-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .tech-stack h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #003366;
+  }
+  
+  .tech-stack h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #007bff;
+  }
+  
+  .tech-category {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tech-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .tech-category p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .tech-category p:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .tech-stack {
+    max-width: 1000px;
+    margin: auto;
+  }
+  

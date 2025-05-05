@@ -1,0 +1,39 @@
+.about-us-container {
+    padding: 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .about-us-container h1 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+  
+  .company-mission, .company-values, .company-vision {
+    margin-top: 30px;
+  }
+  
+  .company-mission h2, .company-values h2, .company-vision h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .company-values ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .company-values li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .company-vision p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
