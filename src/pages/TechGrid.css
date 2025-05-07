@@ -1,0 +1,33 @@
+.tech-section {
+    padding: 2rem 1rem;
+  }
+  
+  .accordion-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .accordion-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .accordion-content {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  .accordion-header h3 {
+    color: #004aad; /* Match same color as h1 */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  

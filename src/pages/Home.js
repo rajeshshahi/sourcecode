@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import Slider from '../components/Slider';
 import { useNavigate } from 'react-router-dom';
-
+import './TechGrid.css';
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
   const navigate = useNavigate();
   const handleRedirect = () => {
     navigate('/contact');
@@ -14,13 +15,12 @@ const Home = () => {
 
       {/* Hero / Intro Section */}
       <section className="hero">
-        <h1>Welcome to Source Code</h1>
-        <p>
-          We are a modern IT company focused on delivering scalable, fast, and secure digital solutions.
-          From web development to cloud deployment — we build it all with the latest technologies.
-        </p>
-        <Slider />
-      </section>
+  <h1>Empowering the Future with <span className="highlight">Source Code.</span></h1>
+  <p>
+    Crafting fast, scalable, and secure digital solutions — from pixel to production.
+  </p>
+  <Slider />
+</section>
 
       {/* Portfolio Section */}
       <section className="section">
@@ -40,14 +40,25 @@ const Home = () => {
       </section>
 
       {/* Blog Section */}
-      <section className="section">
-        <h2>Blog / Resources</h2>
-        <ul>
-          <li><a href="#">How to Choose the Right Tech Stack for Your Business</a></li>
-          <li><a href="#">5 IT Trends to Watch in 2025</a></li>
-          <li><a href="#">React vs Angular: What Should You Use?</a></li>
-        </ul>
-      </section>
+      <section className="section blog-section">
+  <h2 className="blog-title">Blog / Resources</h2>
+  <div className="blog-grid">
+    <a href="/blog/choose-tech-stack" className="blog-card">
+      <h3>How to Choose the Right Tech Stack for Your Business</h3>
+      <p>Find out which tools fit your product vision best.</p>
+    </a>
+    <a href="/blog/it-trends-2025" className="blog-card">
+      <h3>5 IT Trends to Watch in 2025</h3>
+      <p>Stay ahead with predictions on AI, cloud, and security.</p>
+    </a>
+    <a href="/blog/react-vs-angular" className="blog-card">
+      <h3>React vs Angular: What Should You Use?</h3>
+      <p>A side-by-side comparison to help you decide.</p>
+    </a>
+  </div>
+</section>
+
+
 
       {/* Contact Section */}
       <section className="cta-section">
@@ -71,46 +82,60 @@ const Home = () => {
 </section>
 
 
-      {/* What We Work With Section */}
-      <section className="section">
-        <h2>What We Work With</h2>
-        <p>We use modern frameworks and tools to build fast, secure, and scalable digital solutions.</p>
+<section className="tech-section">
+  <h2>What We Work With</h2>
+  <p>We use modern frameworks and tools to build fast, secure, and scalable digital solutions.</p>
 
-        <div className="tech-category">
-          <h3>Frontend Technologies</h3>
-          <ul>
-            <li>React (Vite / Create React App)</li>
-            <li>Tailwind CSS</li>
-            <li>Material UI</li>
-          </ul>
+  <div className="accordion-grid">
+    {[
+      {
+        title: 'Frontend Technologies',
+        items: ['React (Vite / CRA)', 'Tailwind CSS', 'Material UI']
+      },
+      {
+        title: 'Backend & CMS',
+        items: ['Node.js + Express', 'Strapi (Headless CMS)']
+      },
+      {
+        title: 'Hosting & Deployment',
+        items: ['Vercel', 'Netlify', 'AWS Amplify']
+      },
+      {
+        title: 'Forms & Integration',
+        items: ['Formspree', 'EmailJS', 'Custom APIs']
+      },
+      {
+        title: 'DevOps & CI/CD',
+        items: ['GitHub Actions', 'Docker', 'Jenkins']
+      },
+      {
+        title: 'Analytics & Monitoring',
+        items: ['Google Analytics', 'Sentry', 'LogRocket']
+      }
+      
+    ].map((tech, index) => (
+      <div key={index} className="accordion-item">
+        <div
+          className="accordion-header"
+          onClick={() =>
+            setActiveIndex(activeIndex === index ? null : index)
+          }
+        >
+          <h3>{tech.title}</h3>
+          <span>{activeIndex === index ? '-' : '+'}</span>
         </div>
+        {activeIndex === index && (
+          <ul className="accordion-content">
+            {tech.items.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
 
-        <div className="tech-category">
-          <h3>Backend & CMS</h3>
-          <ul>
-            <li>Node.js + Express</li>
-            <li>Strapi (Headless CMS)</li>
-          </ul>
-        </div>
-
-        <div className="tech-category">
-          <h3>Hosting & Deployment</h3>
-          <ul>
-            <li>Vercel</li>
-            <li>Netlify</li>
-            <li>AWS Amplify</li>
-          </ul>
-        </div>
-
-        <div className="tech-category">
-          <h3>Forms & Integration</h3>
-          <ul>
-            <li>Formspree</li>
-            <li>EmailJS</li>
-            <li>Custom APIs</li>
-          </ul>
-        </div>
-      </section>
 
     </div>
   );

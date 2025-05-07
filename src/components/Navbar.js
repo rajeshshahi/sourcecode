@@ -9,11 +9,15 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2m1Ruld2Uqbu1ZPIhvUjmjnlvZr4PUHOHIQ&s" alt="SourceCode Logo" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
-      <span>SourceCode</span>
-      </div>
-      
+    <div className="navbar-logo">
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2m1Ruld2Uqbu1ZPIhvUjmjnlvZr4PUHOHIQ&s"
+    alt="SourceCode Logo"
+    style={{ width: '35px', height: '35px', marginRight: '10px', borderRadius: '4px' }}
+  />
+  <span>SourceCode</span>
+</div>
+     
       <div className="menu-icon" onClick={toggleMenu}>
         ☰
       </div>

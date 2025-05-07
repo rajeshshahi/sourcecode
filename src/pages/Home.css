@@ -127,15 +127,70 @@
   text-align: center;
   }
   
+  .hero {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
   .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #003366;
+    font-size: 2.8rem;
+    color: #0A192F;
+    font-weight: 700;
+    margin-bottom: 1.5rem; /* Increased space below heading */
   }
   
   .hero p {
-    font-size: 1.2rem;
-  max-width: 800px;
-  color: #4a5568; /* medium gray */
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 2.5rem; /* Space below paragraph and above Slider */
+  }
+  
+  .hero .highlight {
+    color: #00BFA6;
+  }
+  
+  .blog-section {
+    padding: 40px 20px;
+    background-color: #f9fafb;
+  }
+  
+  .blog-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f2937; /* dark gray */
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  
+  .blog-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: #111827;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #2563eb; /* Brand accent blue */
+  }
+  
+  .blog-card p {
+    color: #6b7280; /* muted text */
+    font-size: 0.95rem;
   }
   
