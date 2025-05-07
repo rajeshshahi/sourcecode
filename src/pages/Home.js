@@ -1,7 +1,14 @@
 import React from 'react';
 import './Home.css';
+import Slider from '../components/Slider';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate('/contact');
+  };
+
   return (
     <div className="container">
 
@@ -12,6 +19,7 @@ const Home = () => {
           We are a modern IT company focused on delivering scalable, fast, and secure digital solutions.
           From web development to cloud deployment — we build it all with the latest technologies.
         </p>
+        <Slider />
       </section>
 
       {/* Portfolio Section */}
@@ -42,23 +50,26 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="section">
-        <h2>Contact Us</h2>
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-        <div>
-          <p>Email: info@sourcecode.com</p>
-          <p>Follow us:
-            <a href="#"> Facebook</a> |
-            <a href="#"> LinkedIn</a> |
-            <a href="#"> Twitter</a>
-          </p>
-        </div>
-      </section>
+      <section className="cta-section">
+  <div className="cta-grid">
+    <div className="cta-content">
+      <h2>Have a Project in Mind?</h2>
+      <p>Let’s build something extraordinary together. Reach out to our expert team today.</p>
+      <button onClick={handleRedirect}>Let’s Talk</button>
+    </div>
+
+    <div className="cta-info">
+      <p><strong>Email:</strong> <a href="mailto:info@sourcecode.com">info@sourcecode.com</a></p>
+      <p><strong>Follow us:</strong></p>
+      <div className="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* What We Work With Section */}
       <section className="section">

@@ -3,28 +3,30 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <div className="contact-container">
-      <section className="contact-info">
-        <h1>Contact Us</h1>
-        <p>We are located near Chhaya Center, Kathmandu, Nepal.</p>
-        
-        <div className="contact-details">
-          <h2>Our Contact Numbers</h2>
-          <p>Phone: +977 9709914688</p>
-          <p>Phone: +977 9851177054 (WhatsApp available)</p>
-        </div>
-
-        <div className="contact-form">
-          <h2>Send us a Message</h2>
-          <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
-      </section>
-    </div>
+    <section className="contact-section">
+      <div className="contact-container">
+        <h2>Let’s Connect</h2>
+        <p className="subtitle">We’re here to help you build smarter, faster, and more secure digital solutions.</p>
+        <form className="contact-form">
+          <div className="row">
+            <input type="text" placeholder="First Name*" required />
+            <input type="text" placeholder="Last Name*" required />
+          </div>
+          <input type="email" placeholder="Business Email*" required />
+          <input type="text" placeholder="Job Title*" required />
+          <select required>
+            <option value="">What best describes your primary goal?*</option>
+            <option value="build-website">Build a Website</option>
+            <option value="ai-integration">AI Integration</option>
+            <option value="cloud-solutions">Cloud Deployment</option>
+            <option value="automation">Business Automation</option>
+            <option value="other">Other</option>
+          </select>
+          <p className="privacy">We respect your privacy.</p>
+          <button type="submit">Let’s Talk</button>
+        </form>
+      </div>
+    </section>
   );
 };
 

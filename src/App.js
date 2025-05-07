@@ -9,6 +9,8 @@ import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 import Resources from './pages/Resources';
 import OurTeam from './pages/OurTeam';
+import Slider from './components/Slider';
+import CtaPopup from './components/CtaPopup';
 
 const App = () => {
   return (
@@ -24,6 +26,7 @@ const App = () => {
         <Route path="/resources" element={<Resources />} />
         <Route path="/our-team" element={<OurTeam />} />
       </Routes>
+      <CtaPopup />
     </Router>
   );
 };
