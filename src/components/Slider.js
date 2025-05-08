@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-    '/images/traditional-work-method.jpg',
-    '/images/ai-to-human.jpg'  // Updated path without spaces
+    '/images/traditional-work-method.jpeg',
+    '/images/ai-to-human.jpeg'  // Updated path without spaces
   ];
 
 const Slider = () => {
